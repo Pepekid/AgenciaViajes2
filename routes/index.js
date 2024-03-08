@@ -3,14 +3,24 @@ import express from 'express';
 const router = express();
 
 router.get('/', (req, res) => {
-	res.render('inicio', {});
+	res.render('inicio', {
+		pagina: 'Inicio',
+	});
 });
 
 router.get('/nosotros', (req, res) => {
-	const viajes = 'Viaje a Andorra';
-
 	res.render('nosotros', {
-		viajes, // Object Literal Enhancement: llave y valor se llaman igual
+		pagina: 'Nosotros',
+	});
+});
+router.get('/viajes', (req, res) => {
+	res.render('viajes', {
+		pagina: 'Viajes',
+	});
+});
+Vouter.get('/testimoniales', (req, res) => {
+	res.render('testimoniales', {
+		pagina: 'Testimoniales',
 	});
 });
 
