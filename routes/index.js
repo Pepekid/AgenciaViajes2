@@ -1,24 +1,21 @@
-import express from 'express'
+import express from 'express';
 
 const router = express();
 
 router.get('/', (req, res) => {
-    res.render('inicio', {
-
-    });
+	res.render('inicio', {});
 });
 
 router.get('/nosotros', (req, res) => {
+	const viajes = 'Viaje a Andorra';
 
-    const viajes = 'Viaje a Andorra'
-
-    res.render('nosotros', {
-        viajes // Object Literal Enhancement: llave y valor se llaman igual
-    });
+	res.render('nosotros', {
+		viajes, // Object Literal Enhancement: llave y valor se llaman igual
+	});
 });
 
 router.get('/contacto', (req, res) => {
-    res.send('Contacto');
+	res.send('Contacto');
 });
 
 export default router;
