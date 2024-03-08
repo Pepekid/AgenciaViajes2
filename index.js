@@ -11,10 +11,11 @@ app.set('view engine', 'pug');
 
 // Obtener el año actual
 app.use((req, res, next) => {
-	const year = new Date();
-	res.locals.actualYear = year.getFullYear();
+    const year = new Date();
+    res.locals.actualYear = year.getFullYear();
+    res.locals.nombreSitio = "Agencia de Viajes";
 
-	next();
+    next();
 });
 
 // Definir la carpeta pública
@@ -25,5 +26,5 @@ app.use('/', router); // use soporta todos los verbos:POST,GET,PATH y DELETE
 
 // Arrancar el servidor
 app.listen(port, () => {
-	console.log(`Servidor funcionando en el puerto ${port}`);
+    console.log(`Servidor funcionando en el puerto ${port}`);
 });
