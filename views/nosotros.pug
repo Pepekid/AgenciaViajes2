@@ -3,4 +3,17 @@ extends ./layout/index
 block contenido
     main.container.mt-5 
         .row 
-            h1= pagina
+            .col-md-5
+                img(src="img/nosotros.jpg" , alt="imagen sobre nosotros", class="img-fluid")
+
+            .col-md-7
+                h1 #{pagina}
+                blockquote Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce rutrum vehicula quam, in pretium justo convallis eleifend. Suspendisse quis ipsum id est dignissim elementum. Aenean in libero pharetra, facilisis augue eget, viverra leo. Suspendisse sit amet venenatis leo. Donec at neque efficitur, vestibulum elit gravida, ultrices velit. Sed feugiat eros ac arcu suscipit, sit amet bibendum leo dictum.
+                p Sed tristique vel lacus sit amet mollis. Duis fringilla tincidunt sem, sed sagittis nisi. Nam libero mi, vestibulum sit amet blandit ac, mollis vel mauris. Praesent rutrum nunc luctus efficitur convallis.
+                p Phasellus pellentesque ante eget libero luctus, id posuere nisl pretium. Aliquam id ullamcorper lacus. Vestibulum gravida egestas feugiat. Ut pellentesque felis eu justo feugiat cursus. 
+    
+    .listado-iconos 
+        .container.mt-5.py-5.text-center 
+            .row 
+               .col-md-4
+                    img(src="img/icono_seguridad.svg", alt="icono seguridad", class="img-fluid mb-4")
