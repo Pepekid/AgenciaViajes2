@@ -15,18 +15,27 @@ const paginaNosotros = (req, res) => {
 const paginaViajes = async (req, res) => {
 	// Consultar BBDD
 	const viajes = await Viaje.findAll();
-	console.log(viajes);
 
 	res.render('viajes', {
-		viajes,
 		pagina: 'Próximos viajes',
+		viajes,
 	});
 };
 
 // Muestra un viaje por su slug
 const paginaDetalleViaje = async (req, res) => {
 	const { slug } = req.params;
-	console.log(slug);
+
+	try {
+		const viaje = await Viaje.findOne({ where: { slug } });
+
+		res.render('viaje', {
+			pagina: 'Información Viaje',
+			viaje,
+		});
+	} catch (error) {
+		console.log(console.error);
+	}
 };
 
 const paginaTestimoniales = (req, res) => {
