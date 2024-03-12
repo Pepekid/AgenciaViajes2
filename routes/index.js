@@ -9,7 +9,7 @@ import {
 } from '../controllers/paginasController.js';
 import { guardarTestimonial } from '../controllers/testimonialController.js';
 
-const router = express();
+const router = express.Router();
 
 router.get('/', paginaInicio);
 
